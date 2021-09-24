@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eerika <eerika@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/10 16:41:38 by eerika            #+#    #+#             */
-/*   Updated: 2021/06/10 16:41:47 by eerika           ###   ########.fr       */
+/*   Created: 2021/09/21 18:43:49 by eerika            #+#    #+#             */
+/*   Updated: 2021/09/21 18:43:50 by eerika           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/pipex.h"
+#include "../include/pipex_bonus.h"
 
-static void	ft_putchar(char c)
+void	ft_bzero(void *s, size_t n)
 {
-	write(1, &c, 1);
-}
+	size_t	i;
+	char	*tmp;
 
-int	ft_putstr(char *str)
-{
-	int	i;
-
-	i = 0;
-	if (!str)
+	tmp = (char *)s;
+	if (n != 0)
 	{
-		ft_putstr("(null)");
-		return (-1);
-	}	
-	while (str[i])
-	{
-		ft_putchar(str[i]);
-		i++;
+		i = 0;
+		while (n > 0)
+		{
+			tmp[i] = '\0';
+			i++;
+			n--;
+		}
+		s = (void *)tmp;
 	}
-	return (0);
 }

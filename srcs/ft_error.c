@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_error.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eerika <eerika@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/10 16:45:34 by eerika            #+#    #+#             */
-/*   Updated: 2021/06/10 17:06:19 by eerika           ###   ########.fr       */
+/*   Created: 2021/09/21 18:44:23 by eerika            #+#    #+#             */
+/*   Updated: 2021/09/22 12:51:37 by eerika           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../include/pipex_bonus.h"
 #include "../include/pipex.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	ft_error(int err, char *str)
 {
-	size_t	i;
-
-	i = 0;
-	if (n == 0)
-		return (0);
-	while (i < n)
+	if (err == 1)
+		ft_putstr("Error: Cannot allocate memory\n");
+	else if (err == 2)
+		ft_putstr("Error: Arguments are less than six\n");
+	else if (err == 3)
 	{
-		if (s1[i] != s2[i] || s2[i] == '\0')
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-		i++;
+		ft_putstr(str);
+		ft_putstr(": command not found\n");
 	}
-	return (0);
+	exit(err);
 }

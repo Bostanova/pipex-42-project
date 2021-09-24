@@ -5,12 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: eerika <eerika@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/10 16:44:36 by eerika            #+#    #+#             */
-/*   Updated: 2021/06/10 16:44:49 by eerika           ###   ########.fr       */
+/*   Created: 2021/09/21 18:44:46 by eerika            #+#    #+#             */
+/*   Updated: 2021/09/21 18:44:47 by eerika           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/pipex.h"
+#include "../include/pipex_bonus.h"
 
 static int	words(char const *s, char c)
 {

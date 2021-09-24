@@ -5,12 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: eerika <eerika@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/10 16:45:17 by eerika            #+#    #+#             */
-/*   Updated: 2021/06/10 16:45:24 by eerika           ###   ########.fr       */
+/*   Created: 2021/09/21 18:45:02 by eerika            #+#    #+#             */
+/*   Updated: 2021/09/21 18:45:03 by eerika           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/pipex.h"
+#include "../include/pipex_bonus.h"
 
 size_t	ft_strlen(const char *str)
 {
